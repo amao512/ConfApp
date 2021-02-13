@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:top="@dimen/event_card_top_size">
+        <shape>
+            <solid android:color="@color/bg_event_card_darken" />
+            <corners android:radius="@dimen/events_card_radius" />
+        </shape>
+    </item>
+</layer-list>

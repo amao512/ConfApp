@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_layout"
+    tools:context=".event_details.presentation.EventDetailsActivity"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/activity_event_details_toolbar"
+            style="@style/ToolbarTheme"
+            app:menu="@menu/event_details_toolbar_menu"
+            app:navigationIcon="@drawable/ic_arrow_back_bold"
+            />
+
+        <TextView
+            android:id="@+id/activity_event_details_error"
+            style="@style/FailLoadingTheme"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:id="@+id/activity_event_details_speaker_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    android:id="@+id/activity_event_details_invited_speaker"
+                    style="@style/EventStateTheme"
+                    android:text="@string/event_details_invited_speaker"
+                    android:layout_marginHorizontal="@dimen/margin_size_16x"
+                    android:layout_marginTop="@dimen/margin_size_16x"
+                    />
+
+                <TextView
+                    android:id="@+id/activity_event_details_speaker_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_size_8x"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_18x"
+                    android:textStyle="bold"
+                    android:layout_marginHorizontal="@dimen/margin_size_16x"
+                    tools:text="Speaker Name"
+                    />
+
+                <TextView
+                    android:id="@+id/activity_event_details_speaker_job"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_13x"
+                    android:layout_marginHorizontal="@dimen/margin_size_16x"
+                    tools:text="Speaker job"
+                    />
+
+                <TextView
+                    android:id="@+id/activity_event_details_date_and_place"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/margin_size_24x"
+                    android:background="@drawable/bg_text_view_lines"
+                    android:textColor="@color/white"
+                    android:layout_marginHorizontal="@dimen/margin_size_16x"
+                    tools:text="15:00 - 16:00 • Зал номер 5"
+                    />
+
+                <TextView
+                    android:id="@+id/activity_event_details_event_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_18x"
+                    android:textStyle="bold"
+                    android:layout_marginHorizontal="@dimen/margin_size_16x"
+                    tools:text="Увлекательная жизнь в панели уведомлений"
+                    />
+
+                <TextView
+                    android:id="@+id/activity_event_details_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_size_8x"
+                    android:textColor="@color/white"
+                    android:layout_marginHorizontal="@dimen/margin_size_16x"
+                    tools:text="description"
+                    />
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/activity_event_details_progress_bar"
+        android:layout_width="@dimen/progress_bar_size"
+        android:layout_height="@dimen/progress_bar_size"
+        android:layout_gravity="center"
+        android:theme="@style/ProgressBarTheme"
+        android:visibility="gone"
+        />
+</FrameLayout>

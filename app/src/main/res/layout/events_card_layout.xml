@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_size_10x"
+    android:background="@drawable/bg_events_card"
+    android:paddingHorizontal="@dimen/padding_size_16x"
+    android:paddingBottom="@dimen/padding_size_10x"
+    >
+
+    <TextView
+        android:id="@+id/events_card_layout_next_report"
+        style="@style/EventStateTheme"
+        android:text="@string/event_card_state_next_report"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/events_card_layout_completed"
+        style="@style/EventStateTheme"
+        android:background="@drawable/bg_event_completed"
+        android:text="@string/event_card_state_completed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/events_card_date_and_place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_size_20x"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="time and place"
+        />
+
+    <ImageView
+        android:id="@+id/events_card_favourite_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/padding_size_8x"
+        android:paddingHorizontal="@dimen/padding_size_8x"
+        android:src="@drawable/ic_favourite_border"
+        android:layout_marginTop="@dimen/margin_size_16x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/events_card_speaker_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_size_8x"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/text_size_14x"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/events_card_date_and_place"
+        app:layout_constraintTop_toBottomOf="@id/events_card_date_and_place"
+        tools:text="Speaker name"
+        />
+
+    <TextView
+        android:id="@+id/events_card_speaker_job"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="@dimen/text_size_13x"
+        app:layout_constraintStart_toStartOf="@id/events_card_date_and_place"
+        app:layout_constraintTop_toBottomOf="@id/events_card_speaker_name"
+        tools:text="Speaker job"
+        />
+
+    <TextView
+        android:id="@+id/events_card_event_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_size_8x"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:minLines="3"
+        android:textColor="@color/primary_text"
+        app:layout_constraintStart_toStartOf="@id/events_card_date_and_place"
+        app:layout_constraintTop_toBottomOf="@id/events_card_speaker_job"
+        tools:text="Event Title"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

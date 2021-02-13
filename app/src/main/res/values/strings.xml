@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">ConfApp</string>
+
+    <string name="hello_user_fmt">Привет, %1s</string>
+
+    <string name="activity_hello_tv_text">Как тебя зовут?</string>
+    <string name="activity_hello_continue_button">Продолжить</string>
+    <string name="activity_hello_edit_text_hint">Введи имя</string>
+
+    <string name="favourite_btn_text">В избранные</string>
+
+    <string name="event_card_state_next_report">Следующий доклад</string>
+    <string name="event_card_state_completed">Завершен</string>
+
+    <string name="favorite_events_button_text">На главную</string>
+    <string name="favorite_events_no_text">Здесь пока тихо</string>
+
+    <string name="toolbar_menu_item_favorite">Favorite</string>
+    <string name="event_details_invited_speaker">Приглашённый спикер</string>
+</resources>

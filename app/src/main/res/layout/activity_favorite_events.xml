@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_background"
+    tools:context=".favorite_events.presentation.FavoriteEventsActivity"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="center"
+        android:src="@drawable/ic_corona_background"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <androidx.appcompat.widget.Toolbar style="@style/ToolbarTheme" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/activity_favorite_events_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingHorizontal="@dimen/padding_size_24x"
+            android:paddingBottom="@dimen/activity_all_events_recycler_bottom_size"
+            android:scrollbars="none"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/events_card_layout"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/activity_favorite_events_no_events"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_space_astronaut"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/favorite_events_no_text"
+            android:textSize="@dimen/text_size_18x"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/margin_size_24x"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/activity_all_favorites_events_button_home"
+        style="@style/FavoriteButtonTheme"
+        android:drawableStart="@drawable/ic_align_left"
+        android:text="@string/favorite_events_button_text"
+        />
+
+</FrameLayout>

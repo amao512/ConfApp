@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".hello.presentation.HelloActivity"
+    >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_hello_toolbar_height"
+        android:layout_weight="1"
+        android:background="@color/primary_background"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_corona_background"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|top"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_hello_margin_top"
+                android:src="@drawable/ic_logo_white"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_corona"
+                />
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/activity_hello_margin_top"
+        android:paddingBottom="@dimen/padding_size_16x"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_hello_margin_top"
+            android:text="@string/activity_hello_tv_text"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/text_size_24x"
+            android:textStyle="bold"
+            />
+
+        <EditText
+            android:id="@+id/activity_hello_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_hello_margin_top"
+            android:background="@drawable/bg_edit_text"
+            android:hint="@string/activity_hello_edit_text_hint"
+            android:inputType="text"
+            android:paddingHorizontal="@dimen/edit_text_padding_size_16x"
+            android:paddingVertical="@dimen/edit_text_padding_size_10x"
+            android:textColor="@color/primary_text"
+            />
+
+        <Button
+            android:id="@+id/activity_hello_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_hello_margin_top"
+            android:background="@drawable/bg_button"
+            android:enabled="false"
+            android:paddingVertical="@dimen/button_padding_vertical_small"
+            android:text="@string/activity_hello_continue_button"
+            android:textAllCaps="false"
+            android:textColor="@drawable/selector_continue_button_text_color"
+            android:textSize="@dimen/button_text_size_medium"
+            />
+    </LinearLayout>
+</LinearLayout>

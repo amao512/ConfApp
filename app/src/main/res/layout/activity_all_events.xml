@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_background"
+    tools:context=".all_events.presentation.AllEventsActivity"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="center"
+        android:src="@drawable/ic_corona_background"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/activity_all_events_toolbar"
+            style="@style/ToolbarTheme"
+            app:navigationIcon="@drawable/ic_arrow_back_bold"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/activity_all_events_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingHorizontal="@dimen/padding_size_24x"
+            android:paddingBottom="@dimen/activity_all_events_recycler_bottom_size"
+            android:scrollbars="none"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/events_card_layout"
+            />
+
+        <TextView
+            android:id="@+id/activity_all_events_error"
+            style="@style/FailLoadingTheme"
+            android:layout_gravity="center"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/activity_all_favorites_button"
+        style="@style/FavoriteButtonTheme"
+        />
+
+    <ProgressBar
+        android:id="@+id/activity_all_events_progress_bar"
+        android:layout_width="@dimen/progress_bar_size"
+        android:layout_height="@dimen/progress_bar_size"
+        android:layout_gravity="center"
+        android:theme="@style/ProgressBarTheme"
+        android:visibility="gone"
+        />
+</FrameLayout>
